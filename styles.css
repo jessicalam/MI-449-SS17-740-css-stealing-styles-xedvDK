@@ -2,16 +2,14 @@ body {
   margin: 0 auto;
   padding-top: 150px;
   font-family: 'Open Sans', Arial, sans-serif;
-  background: #f9f7f5;
+  background: #07d2ff;
   font-weight: bold;
   text-align: center;
 }
 
 section { font-size: 70px; }
 
-.s {
-  color: red;
-}
+.s { color: red; }
 
 .s:hover {
   color: yellow;
@@ -93,6 +91,26 @@ section { font-size: 70px; }
   color: purple;
 }
 
+p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  margin: 20px 0;
+}
+
+input {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  font: 13.3333px Arial;
+  overflow: visible;
+}
+
 input[type=text] {
   width: 50%;
   padding: 12px 20px;
@@ -102,18 +120,41 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  border: 3px solid #555;
+  outline: -webkit-focus-ring-color auto 5px;
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
+  outline-width: 5px;
+}
+
+input:not([type]),
+input[type=date],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=url],
+select,
+textarea {
+  height: 38px;
+  padding: 6px 10px;
+  background-color: #fff;
+  border: 1px solid #d4dada;
+  border-radius: 3px;
+  box-shadow: none;
+  vertical-align: bottom;
 }
 
 button {
   white-space: nowrap;
   display: inline-block;
+  height: 40px;
   line-height: 40px;
-  padding: 15px;
+  padding: 0 14px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  background: white;
+  background: #fff;
   border-radius: 4px;
-  font-size: 50px;
+  font-size: 15px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
