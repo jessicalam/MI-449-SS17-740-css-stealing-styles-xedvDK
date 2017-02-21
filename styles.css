@@ -2,7 +2,7 @@ body {
   margin: 0 auto;
   padding-top: 150px;
   font-family: 'Open Sans', Arial, sans-serif;
-  background: #07d2ff;
+  background: white;
   font-weight: bold;
   text-align: center;
 }
@@ -108,7 +108,6 @@ input {
   display: inline-block;
   text-align: start;
   font: 13.3333px Arial;
-  overflow: visible;
 }
 
 input[type=text] {
@@ -119,23 +118,30 @@ input[type=text] {
   box-sizing: border-box;
 }
 
-input[type=text]:focus {
-  outline: -webkit-focus-ring-color auto 5px;
-  outline-color: -webkit-focus-ring-color;
-  outline-style: auto;
-  outline-width: 5px;
+input:not([type]):focus,
+input[type=date]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:not(.CodeMirror-search-field):focus,
+input[type=url]:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #07682c;
+  outline: 0;
+  border-radius: 3px;
 }
 
-input:not([type]),
-input[type=date],
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=url],
-select,
+button,
+input,
 textarea {
+  font: inherit;
+  margin: 0;
+}
+
+input[type="text"] {
   height: 38px;
   padding: 6px 10px;
   background-color: #fff;
@@ -161,6 +167,7 @@ button {
   color: #6772e5;
   text-decoration: none;
   transition: all 0.15s ease;
+  border: none;
 }
 
 button:hover {
